@@ -16,25 +16,29 @@
 		<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
 		<link rel="apple-touch-icon" href="images/favicon.png">
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<script type="text/javascript">
-		if(("standalone" in window.navigator) && window.navigator.standalone){
-		var noddy, remotes = false;
-		document.addEventListener('click', function(event) {
-		noddy = event.target;
-		while(noddy.nodeName !== "A" && noddy.nodeName !== "HTML") {
-			noddy = noddy.parentNode;
-		}
-		if('href' in noddy && noddy.href.indexOf('http') !== -1 && (noddy.href.indexOf(document.location.host) !== -1 || remotes))
-		{
-			event.preventDefault();
-			document.location.href = noddy.href;
-		}
-		},false);
-	}
-	</script>
 	</head>
   <frameset framespacing="0" rows="48,*" frameborder="0" noresize scrolling="auto">
       <frame name="top" src="heading.html" target="top" scrolling="no">
       <frame name="main" src="main.html" target="main" scrolling="auto">
   </frameset>
+	<!-- Scripts -->
+		<!-- Start Open Web Analytics Tracker -->
+		<script type="text/javascript">
+				//<![CDATA[
+				var owa_baseUrl = 'http://ronningen.homeip.net/analytics/';
+				var owa_cmds = owa_cmds || [];
+				owa_cmds.push(['setSiteId', 'aa2cff2d0ff6505714fd31f081b79178']);
+				owa_cmds.push(['trackClicks']);
+				owa_cmds.push(['trackPageView']);
+				owa_cmds.push(['trackDomStream']);
+
+				(function() {
+				var _owa = document.createElement('script'); _owa.type = 'text/javascript'; _owa.async = true;
+				owa_baseUrl = ('https:' == document.location.protocol ? window.owa_baseSecUrl || owa_baseUrl.replace(/http:/, 'https:') : owa_baseUrl );
+				_owa.src = owa_baseUrl + 'modules/base/js/owa.tracker-combined-min.js';
+				var _owa_s = document.getElementsByTagName('script')[0]; _owa_s.parentNode.insertBefore(_owa, _owa_s);
+				}());
+				//]]>
+		</script>
+		<!-- End Open Web Analytics Code -->
 </html>
