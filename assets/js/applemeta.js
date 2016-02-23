@@ -1,4 +1,4 @@
-$( document ).on(
+$(document).on(
     "click",
     "a",
     function( event ){

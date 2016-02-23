@@ -59,14 +59,12 @@
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/applemeta.js"></script>
 			<script>
-    		//document.getElementById("lastModified").innerHTML = document.lastModified;
 				$.ajax({
 		    url: "version.txt",
-		    data: {},
 		    async: false,
-		    success: function (response) {
-		        $("#lastModified").html(response);
-		    },
+				complete: function (response) {
+					$("#lastModified").html(response.responseText);
+				},
 		    dataType: "text/plain"
 			});
 			</script>
