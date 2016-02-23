@@ -44,10 +44,24 @@
 						<div id="">
 							<ul class="menu">
 								<li><img src="images/ronningen_green.png" style="height: 20px; margin-bottom: -3px"></li><li>&copy; 2016 Bjørn Erik Rønningen. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								<li><div id="lastModified">1</div></li>
 							</ul>
 						</div>
 					</footer>
 			</div>
+
+			<script>
+    		//document.getElementById("lastModified").innerHTML = document.lastModified;
+				$.ajax({
+		    url: "version.txt",
+		    data: {},
+		    async: false,
+		    success: function (response) {
+		        $("#lastModified").html(response);
+		    },
+		    dataType: "text/plain"
+			});
+			</script>
 
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
