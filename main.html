@@ -44,7 +44,7 @@
 						<div id="">
 							<ul class="menu">
 								<li><img src="images/ronningen_green.png" style="height: 20px; margin-bottom: -3px"></li><li>&copy; 2016 Bjørn Erik Rønningen. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-								<li><div id="lastModified">1</div></li>
+								<li><div id="lastModified"></div></li>
 							</ul>
 						</div>
 					</footer>
@@ -63,7 +63,7 @@
 		    url: "version.txt",
 		    async: false,
 				complete: function (response) {
-					$("#lastModified").html(response.responseText);
+					$("#lastModified").html("Version: " + response.responseText);
 				},
 		    dataType: "text/plain"
 			});
