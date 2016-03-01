@@ -32,8 +32,12 @@
 											<li><a href="http://goo.gl/forms/gQEh2WlgVH" class="icon fa-bar-chart"><span class="label">Endre Budsjett</span></a><h5>Endre budsjett</h5></li>
 											<li><div onclick="window.open('googlesheets://docs.google.com/spreadsheets/')" style="cursor: pointer"><a href="#" class="icon fa-google"><span class="label">Google Docs</span></a></div><h5>Google Docs</h5></li>
 										</ul>
-										<hr>
-										<ul class="special">
+									</section>
+									<section class="showHideSection">
+										<i class="showHideButton fa fa-3x fa-chevron-circle-down" onclick="toggle_visibility('#secondGrid')" style="cursor: pointer"></i>
+									</section>
+									<section class="box highlight">
+										<ul class="special" id="secondGrid" style="display: none;">
 											<li><a href="http://ronningen.homeip.net/analytics" class="icon fa-signal"><span class="label">Analytics</span></a><h5>Statistikk</h5></li>
 											<li><div onclick="window.open('http://ronningen.homeip.net/phpMyAdmin')" style="cursor: pointer"><a href="#" class="icon fa-database"><span class="label">phpMyAdmin</span></a></div><h5>DB-admin</h5></li>
 											<li><div onclick="window.open('http://ronningen.homeip.net/photo')" style="cursor: pointer"><a href="#" class="icon fa-photo"><span class="label">Photo Gallery</span></a></div><h5>Bildegalleri</h5></li>
@@ -75,6 +79,11 @@
 				},
 		    dataType: "text/plain"
 			});
+
+			function toggle_visibility(id) {
+				$('.showHideButton').toggleClass('fa-flip-vertical');
+				$(id).toggle();
+			}
 			</script>
 	</body>
 </html>
